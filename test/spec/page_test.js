@@ -11,13 +11,13 @@ suite('Run web app \'page test\' using webdriverio/Selenium.', function() {
         browser.url('/');
     });
 
-    test('checks the title only', function(done) {
+    test('checks the title only', function() {
         var title = browser.getTitle();
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Library');
     });
 
-    test('should be able to navigate between the pages', function(done) {
+    test('should be able to navigate between the pages', function() {
         var title = browser.getTitle();
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Library');
