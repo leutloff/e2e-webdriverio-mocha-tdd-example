@@ -1,3 +1,5 @@
+# use trusty (14.04) instead of the default precise (12.04)
+dist: trusty
 language: node_js
 
 node_js:
@@ -25,7 +27,9 @@ before_script:
     #- sudo npm install - is automatically executed when install is missing
     # node app.js is started in postinstall of npm install
     #- node app.js &
-    - npm start
+    - npm start &
+    # TODO reduce time to wait for starting the express app
+    - sleep 5
     # check that the web app is running:
     - wget http://localhost:3000/authors || true
     # show the beginning of the file - the whole file is not displayed within TRAVIS (because line is too long?)

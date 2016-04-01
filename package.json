@@ -34,7 +34,7 @@
     "webdriverio": "^4.0.5"
   },
   "scripts": {
-    "start": "node app.js &",
+    "start": "node app.js",
     "test": "./node_modules/.bin/wdio wdio.conf.js"
   },
   "repository": {
