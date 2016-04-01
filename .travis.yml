@@ -36,10 +36,12 @@ before_script:
     # show the beginning of the file - the whole file is not displayed within TRAVIS (because line is too long?)
     - cat authors | cut -d'/' -f1
 
-#script:
-#    #- export TEST_RUN_LOCAL=true && npm test
-#    #- echo "Run the same tests as above, but using the remote browser."
-#    - export TEST_RUN_LOCAL=false && npm test
+script:
+    - npm test
+    - echo "Run the same tests as above, but using the changed configuration."
+    - cat wdio.conf.js | sed s/'dot'/'spec'/g > wdio.conf.js
+    - cat wdio.conf.js | grep "'spec'"
+    - npm test || true
 
 addons:
   sauce_connect: true
