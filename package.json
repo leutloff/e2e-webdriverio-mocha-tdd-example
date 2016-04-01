@@ -1,0 +1,51 @@
+{
+  "name": "e2e-webdriverio-mocha-tdd-example",
+  "description": "Example for End-To-End test with TDD approach using Webdriver IO",
+  "keywords": [
+    "e2e",
+    "End-To-End-Test",
+    "wdio",
+    "webdriverio",
+    "selenium",
+    "mocha",
+    "saucelabs"
+  ],
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": "Christian Leutloff <leutloff@sundancer.oche.de>",
+  "contributors": [],
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "errorhandler": "^1.4.3",
+    "express": "^4.13.4",
+    "jade": "^1.11.0",
+    "method-override": "^2.3.5",
+    "serve-static": "^1.10.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5",
+    "saucelabs": "^1.2.0",
+    "selenium-standalone": "^5.1.0",
+    "wdio-dot-reporter": "0.0.5",
+    "wdio-mocha-framework": "^0.2.12",
+    "wdio-sauce-service": "^0.2.2",
+    "wdio-selenium-standalone-service": "0.0.1",
+    "webdriverio": "^4.0.5"
+  },
+  "scripts": {
+    "start": "node app.js &",
+    "test": "./node_modules/.bin/wdio wdio.conf.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leutloff/e2e-webdriverio-mocha-tdd-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/leutloff/e2e-webdriverio-mocha-tdd-example/issues"
+  },
+  "homepage": "https://github.com/leutloff/e2e-webdriverio-mocha-tdd-example/#readme",
+  "engines": {
+    "node": ">= 0.12.0"
+  }
+}
