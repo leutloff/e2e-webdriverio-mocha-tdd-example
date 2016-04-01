@@ -11,7 +11,6 @@ exports.config = {
     user: process.env.SAUCE_USERNAME,
     key: process.env.SAUCE_ACCESS_KEY,
     
-    
     //
     // ==================
     // Specify Test Files
@@ -43,11 +42,17 @@ exports.config = {
     // files and you set maxInstances to 10, all spec files will get tested at the same time
     // and 30 processes will get spawned. The property handles how many capabilities
     // from the same test should run tests.
-    //
+    
+    // tunnel-identifier and build are documented in http://webdriver.io/guide/usage/cloudservices.html
+
     capabilities: [{
-        browserName: 'firefox'
+        browserName: 'firefox',
+        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER || 'unknown-jobnumber',
+        'build': process.env.TRAVIS_BUILD_NUMBER || 'unknown-build'
     },{
-        browserName: 'chrome'
+        browserName: 'chrome',
+        'tunnel-identifier': process.env.TRAVIS_JOB_NUMBER || 'unknown-jobnumber',
+        'build': process.env.TRAVIS_BUILD_NUMBER || 'unknown-build'
     }],
     //
     // ===================
