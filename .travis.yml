@@ -44,9 +44,8 @@ script:
     - (cat wdio.conf.js | grep "'dot'") || true
     - cp wdio.conf.js t
     - cat t | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
-    - cat wdio.conf.js | sed -e 's/dot/spec/g' > wdio.conf.js
     - ls -al wdio* t  || true
-    - (cat wdio.conf.js | grep 'spec') || true
+    - (cat wdio.conf.js | grep "'spec'") || true
     - diff t wdio.conf.js || true
     - npm test || true
 
