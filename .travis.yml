@@ -40,9 +40,14 @@ script:
     - npm test
     - echo "Run the same tests as above, but using the changed configuration."
     - sed --version
+    - ls -al wdio*
     - (cat wdio.conf.js | grep "'dot'") || true
-    - cat wdio.conf.js | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
-    - (cat wdio.conf.js | grep "'spec'") || true
+    - cp wdio.conf.js t
+    - cat t | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
+    - cat wdio.conf.js | sed -e 's/dot/spec/g' > wdio.conf.js
+    - ls -al wdio* t  || true
+    - (cat wdio.conf.js | grep 'spec') || true
+    - diff t wdio.conf.js || true
     - npm test || true
 
 addons:
