@@ -6,7 +6,7 @@ language: node_js
 node_js:
 #    - "node"
     - "4.4"
-#    - "5.7"
+    - "5.7"
 #    - "0.12"
 
 #before_install:
@@ -60,18 +60,18 @@ env:
 # Get the names and versions from the node.js tab in the section "COPY CODE".
 # Use underscore for spaces in platform and browser names - they are replaced inside js.
   matrix:
-#    - _BROWSER: "firefox"
-#      _PLATFORM: "Linux"
-#      _VERSION: "44.0"
+    - _BROWSER: "firefox"
+      _PLATFORM: "Linux"
+      _VERSION: "45.0"
     - _BROWSER: "firefox"
       _PLATFORM: "Windows_7"
-      _VERSION: "44.0"
-#    - _BROWSER: "chrome"
-#      _PLATFORM: "Windows_7"
-#      _VERSION: "48.0"
-#    - _BROWSER: "internet_explorer"
-#      _PLATFORM: "Windows_7"
-#      _VERSION: "11.0"
-#    - _BROWSER: "microsoftedge"
-#      _PLATFORM: "Windows_10"
-#      _VERSION: "20.10240"
+      _VERSION: "45.0"
+    - _BROWSER: "chrome"
+      _PLATFORM: "Windows_7"
+      _VERSION: "49.0"
+    - _BROWSER: "internet_explorer"
+      _PLATFORM: "Windows_7"
+      _VERSION: "11.0"
+    - _BROWSER: "microsoftedge"
+      _PLATFORM: "Windows_10"
+      _VERSION: "13.10586"
