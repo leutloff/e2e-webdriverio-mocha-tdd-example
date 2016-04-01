@@ -39,8 +39,10 @@ before_script:
 script:
     - npm test
     - echo "Run the same tests as above, but using the changed configuration."
-    - cat wdio.conf.js | sed s/'dot'/'spec'/g > wdio.conf.js
-    - cat wdio.conf.js | grep "'spec'"
+    - sed --version
+    - (cat wdio.conf.js | grep "'dot'") || true
+    - cat wdio.conf.js | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
+    - (cat wdio.conf.js | grep "'spec'") || true
     - npm test || true
 
 addons:
