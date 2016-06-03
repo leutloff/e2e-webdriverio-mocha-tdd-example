@@ -19,7 +19,7 @@
     "errorhandler": "^1.4.3",
     "express": "^4.13.4",
     "jade": "^1.11.0",
-    "method-override": "^2.3.5",
+    "method-override": "^2.3.6",
     "serve-static": "^1.10.2"
   },
   "devDependencies": {
