@@ -10,7 +10,7 @@
     "mocha",
     "saucelabs"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": "Christian Leutloff <leutloff@sundancer.oche.de>",
   "contributors": [],
@@ -20,17 +20,17 @@
     "express": "^4.13.4",
     "jade": "^1.11.0",
     "method-override": "^2.3.6",
-    "serve-static": "^1.10.2"
+    "serve-static": "^1.11.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
     "saucelabs": "^1.2.0",
-    "selenium-standalone": "^5.1.0",
-    "wdio-dot-reporter": "0.0.5",
+    "selenium-standalone": "^5.1.1",
+    "wdio-dot-reporter": "^0.0.5",
     "wdio-mocha-framework": "^0.3.1",
     "wdio-sauce-service": "^0.2.2",
-    "wdio-selenium-standalone-service": "0.0.5",
+    "wdio-selenium-standalone-service": "^0.0.5",
     "webdriverio": "^4.0.9"
   },
   "scripts": {
