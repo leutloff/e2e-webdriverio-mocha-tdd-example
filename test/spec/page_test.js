@@ -22,7 +22,7 @@ suite('Run web app \'page test\' using webdriverio/Selenium.', function() {
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Library');
 
-        browser.click('#authors').waitForExist('#back', 10000);
+        browser.click('#authors').waitForExist('#back', 10100);
         title = browser.getTitle();
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Authors');
@@ -30,11 +30,11 @@ suite('Run web app \'page test\' using webdriverio/Selenium.', function() {
         //console.log('#author1: ' + author);
         assert.include(author, 'Patrick Rothfuss', 'assert that the author is Patrick');
 
-        browser.click('#back').waitForExist('#books', 1000);
+        browser.click('#back').waitForExist('#books', 1001);
         title = browser.getTitle();
         assert.strictEqual(title, 'Library');
 
-        browser.click('#books').waitForExist('#back', 1000);
+        browser.click('#books').waitForExist('#back', 2002);
         title = browser.getTitle();
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Books');
@@ -42,7 +42,7 @@ suite('Run web app \'page test\' using webdriverio/Selenium.', function() {
         //console.log('#book1: ' + book);
         assert.strictEqual(book, 'Wise Man\'s Fear');
 
-        browser.click('#back').waitForExist('#authors', 1000);
+        browser.click('#back').waitForExist('#authors', 1010);
         title = browser.getTitle();
         //console.log('Title was: ' + title);
         assert.strictEqual(title, 'Library');
