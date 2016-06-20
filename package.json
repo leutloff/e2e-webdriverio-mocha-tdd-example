@@ -15,7 +15,7 @@
   "author": "Christian Leutloff <leutloff@sundancer.oche.de>",
   "contributors": [],
   "dependencies": {
-    "body-parser": "^1.15.0",
+    "body-parser": "^1.15.2",
     "errorhandler": "^1.4.3",
     "express": "^4.13.4",
     "jade": "^1.11.0",
