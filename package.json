@@ -31,7 +31,7 @@
     "wdio-mocha-framework": "^0.3.2",
     "wdio-sauce-service": "^0.2.2",
     "wdio-selenium-standalone-service": "^0.0.5",
-    "webdriverio": "^4.1.1"
+    "webdriverio": "^4.2.0"
   },
   "scripts": {
     "start": "node app.js",
