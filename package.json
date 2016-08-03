@@ -24,7 +24,7 @@
   },
   "devDependencies": {
     "chai": "^3.5.0",
-    "mocha": "^2.5.3",
+    "mocha": "^3.0.0",
     "saucelabs": "^1.2.0",
     "selenium-standalone": "^5.1.1",
     "wdio-dot-reporter": "^0.0.6",
