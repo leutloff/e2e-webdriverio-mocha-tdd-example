@@ -5,24 +5,12 @@ language: node_js
 
 node_js:
 #    - "node"
-    - "4.4"
+    # LTS
+    - "4.6"
     - "5.7"
+    # Current
+    - "6.7"
 #    - "0.12"
-
-#before_install:
-    # download and start selenium server - thought that it is not necessary, but without the website is not available within SauceLabs.
-    # download selenium server - when updating the jar: adapt the SELENIUMVERSION in the test files, too.
-    # Latest version: http://www.seleniumhq.org/download/
-    #- curl -O https://selenium-release.storage.googleapis.com/2.50/selenium-server-standalone-2.50.1.jar
-    # Download and install the chromedriver to be able to execute the browser tests locally
-    # Latest version: https://sites.google.com/a/chromium.org/chromedriver/downloads
-    #- curl https://chromedriver.storage.googleapis.com/2.20/chromedriver_linux64.zip > chromedriver_linux64.zip && unzip chromedriver_linux64.zip && sudo cp chromedriver /usr/local/bin && sudo chmod +rx chromedriver /usr/local/bin/chromedriver
-    # start this before installation to let the server be up and ready without extra waiting time.
-    #- java -jar selenium-server-standalone-2.50.1.jar -Dwebdriver.chrome.driver=./chromedriver &
-    #- sleep 15 works only on Win7/chrome44 and Win7/ie11
-    #- sleep 15
-    #- echo "$(date +%H:%M:%S.%N) - before_install end"
-
 
 before_script:
     #- sudo npm install - is automatically executed when install is missing
@@ -38,16 +26,16 @@ before_script:
 
 script:
     - npm test
-    - echo "Run the same tests as above, but using the changed configuration."
-    - sed --version
-    - ls -al wdio*
-    - (cat wdio.conf.js | grep "'dot'") || true
-    - cp wdio.conf.js t
-    - cat t | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
-    - ls -al wdio* t  || true
-    - (cat wdio.conf.js | grep "'spec'") || true
-    - diff t wdio.conf.js || true
-    - npm test || true
+    #- echo "Run the same tests as above, but using the changed configuration."
+    #- sed --version
+    #- ls -al wdio*
+    #- (cat wdio.conf.js | grep "'dot'") || true
+    #- cp wdio.conf.js t
+    #- cat t | sed -e "s/'dot'/'spec'/g" > wdio.conf.js
+    #- ls -al wdio* t  || true
+    #- (cat wdio.conf.js | grep "'spec'") || true
+    #- diff t wdio.conf.js || true
+    #- npm test || true
 
 addons:
   sauce_connect: true
@@ -65,13 +53,17 @@ env:
       _VERSION: "45.0"
     - _BROWSER: "firefox"
       _PLATFORM: "Windows_7"
-      _VERSION: "45.0"
+      _VERSION: "49.0"
     - _BROWSER: "chrome"
       _PLATFORM: "Windows_7"
-      _VERSION: "49.0"
+      _VERSION: "53.0"
     - _BROWSER: "internet_explorer"
       _PLATFORM: "Windows_7"
       _VERSION: "11.0"
     - _BROWSER: "microsoftedge"
       _PLATFORM: "Windows_10"
       _VERSION: "13.10586"
+
+cache:
+  directories:
+    - node_modules
