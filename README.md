@@ -12,7 +12,7 @@ The following may be outdated:
 A complete description is provided from the initial author [Nathan Oehlman](https://github.com/nathanoehlman) at 
 [http://unexpectedliteral.com/2012/05/09/automated-functional-testing-with-javascript-using-mocha-and-selenium-part-2/](http://unexpectedliteral.com/2012/05/09/automated-functional-testing-with-javascript-using-mocha-and-selenium-part-2/).
 
-The used test runner is [Mocha](http://visionmedia.github.io/mocha/). 
+The used test runner is [Mocha](http://mochajs.org/). 
 This example focuses on TDD as provided by the [Chai](http://chaijs.com/) Library.
 
 
