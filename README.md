@@ -12,3 +12,10 @@ Initial author was [Nathan Oehlman](https://github.com/nathanoehlman).
 
 The used test runner is [Mocha](http://mochajs.org/).
 This example focuses on TDD as provided by the [Chai](http://chaijs.com/) Library.
+
+To execute the tests perform these steps after cloning the source:
+
+- npm install
+- npm run start-webdriver &
+- npm start &
+- npm test
