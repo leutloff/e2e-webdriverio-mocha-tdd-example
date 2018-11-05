@@ -29,7 +29,7 @@
     "selenium-standalone": "^6.15.1",
     "wdio-dot-reporter": "^0.0.10",
     "wdio-mocha-framework": "^0.6.2",
-    "wdio-sauce-service": "^0.4.10",
+    "wdio-sauce-service": "^0.4.13",
     "wdio-selenium-standalone-service": "^0.0.10",
     "webdriverio": "^4.13.2"
   },
