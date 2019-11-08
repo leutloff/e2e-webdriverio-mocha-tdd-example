@@ -31,7 +31,7 @@
     "wdio-mocha-framework": "^0.6.2",
     "wdio-sauce-service": "^0.4.10",
     "wdio-selenium-standalone-service": "^0.0.10",
-    "webdriverio": "^4.13.2"
+    "webdriverio": "^5.16.4"
   },
   "scripts": {
     "postinstall": "./node_modules/selenium-standalone/bin/selenium-standalone install",
